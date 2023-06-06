@@ -5,6 +5,7 @@ hasTooltip.forEach(element => {
     tooltipElem.innerHTML = element.title
     tooltipElem.classList.add('tooltip')
     tooltipElem.setAttribute('data-position', 'top')
+    element.appendChild(tooltipElem)
 });
 
 hasTooltip.forEach(element => {
