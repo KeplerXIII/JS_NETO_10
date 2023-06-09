@@ -3,7 +3,8 @@ const tskList = document.getElementById('tasks__list')
 
 btnAdd.addEventListener('click', (event) => {
     event.preventDefault()
-    const taskInput = document.getElementById('task__input').value
+    const RawtaskInput = document.getElementById('task__input').value
+    const taskInput = RawtaskInput.trim()
     if (taskInput) {
         const elementShell = document.createElement('div')
         elementShell.classList.add('task')
@@ -15,5 +16,5 @@ btnAdd.addEventListener('click', (event) => {
             event.preventDefault()
             btnRem.parentElement.remove()
         })
-    }
+    } else {document.getElementById('task__input').value = ''}
 })
